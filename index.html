@@ -31,54 +31,55 @@
     }
      </script>
 </head>  
-<body class="grid content-start xl:content-center  lg:justify-items-center lg:bg-DarkSlateGrey h-[800px] lg:h-screen"> 
-  <div class="lg:grid grid-cols-2 lg:gap-16 bg-White rounded-3xl lg:pr-7 lg:pl-16 lg:py-8">
-    <img src="assets/images/illustration-sign-up-mobile.svg" alt="" class="md:hidden mb-8">
-    <div class="grid lg:content-center lg:w-[400px] px-5 lg:px-0">
-      <h1 class="text-DarkSlateGrey text-4xl lg:text-6xl font-bold mb-8">Stay updated!</h1>
+  <body class="grid content-start xl:content-center  lg:justify-items-center lg:bg-CharcoalGrey h-[800px] lg:h-screen"> 
+    <div class="lg:grid grid-cols-2 lg:gap-16 bg-White rounded-3xl lg:pr-7 lg:pl-16 lg:py-8">
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="" class="md:hidden mb-8">
+      <div class="grid lg:content-center lg:w-[400px] px-5 lg:px-0">
+        <h1 class="text-DarkSlateGrey text-4xl lg:text-6xl font-bold mb-8">Stay updated!</h1>
 
-      <p class="mb-8 text-CharcoalGrey font-medium leading-6">Join 60,000+ product managers receiving monthly updates on:</p>
-    
-      <div class="flex gap-3 mb-2 lg:mb-5 leading-6">
-          <img src="assets/images/icon-list.svg" alt="icon-list" class="mb-9 lg:mb-0">
-          <p class="text-CharcoalGrey font-medium">Product discovery and building what matters</p>
-      </div>    
-      <div  class="flex gap-3 mb-2 lg:mb-5 leading-6">
-        <img src="assets/images/icon-list.svg" alt="icon-list" class="mb-9 lg:mb-0">
-        <p class="text-CharcoalGrey font-medium">Measuring to ensure updates are a success</p>
-      </div>  
-      <div  class="flex gap-3 mb-5 lg:mb-10 leading-6">
-        <img src="assets/images/icon-list.svg" alt="icon-list" class="mb-9 lg:mb-0">
-        <p class="text-CharcoalGrey font-medium">And much more!</p>
-      </div> 
-
-      <form action="" id="form">
-        <label for="email" class="text-DarkSlateGrey font-bold text-xs mb-8">Email address</label><br>
-        <input type="email" id="email" name="email" required placeholder="email@company.com" class=" w-full border-[1px] border-Grey py-3 lg:py-5 px-10 lg:px-14 rounded-lg cursor-pointer mb-5"><br>
-        <div class="text-red-500 text-sm mt-1" id="emailError"></div>
-      </form>
-      <button type="submit" class="text-White bg-DarkSlateGrey hover:bg-gradient-to-r from-pink-600 to-orange-600 hover:shadow-lg shadow-orange-600/50 py-3 lg:py-5 px-10 lg:px-14 mb-5 lg:mb-0  lg:font-bold rounded-lg cursor-pointer" onclick="display()">Subscribe to monthly newsletter</button>
+        <p class="mb-8 text-CharcoalGrey font-medium leading-6">Join 60,000+ product managers receiving monthly updates on:</p>
       
-      <div class="bg-White lg:p-10 lg:rounded-3xl hidden" id="successMessage">
-        <img src="assets/images/icon-success.svg" alt="" class="mb-5">
-        <h1 class="text-CharcoalGrey text-5xl font-bold mb-5">Thanks for subscribing!</h1>
-        <p class="text-CharcoalGrey mb-5"> A confirmation email has been sent to ash@loremcompany.com. 
-            Please open it and click the button inside to confirm your subscription.
-        </p>
-        <button type="submit" class="grid content-center bg-DarkSlateGrey hover:bg-gradient-to-r from-pink-600 to-orange-600 hover:shadow-lg shadow-orange-600/50 text-White py-2 px-20 rounded-lg cursor-pointer">Dismiss message </button>
+        <div class="flex gap-3 mb-2 lg:mb-5 leading-6">
+            <img src="assets/images/icon-list.svg" alt="icon-list" class="mb-9 lg:mb-0">
+            <p class="text-CharcoalGrey font-medium">Product discovery and building what matters</p>
+        </div>    
+        <div  class="flex gap-3 mb-2 lg:mb-5 leading-6">
+          <img src="assets/images/icon-list.svg" alt="icon-list" class="mb-9 lg:mb-0">
+          <p class="text-CharcoalGrey font-medium">Measuring to ensure updates are a success</p>
+        </div>  
+        <div  class="flex gap-3 mb-5 lg:mb-10 leading-6">
+          <img src="assets/images/icon-list.svg" alt="icon-list" class="mb-9 lg:mb-0">
+          <p class="text-CharcoalGrey font-medium">And much more!</p>
+        </div> 
+
+        <form id="form" class="content-start grid gap-y-2 relative">
+          <label for="email" class="text-DarkSlateGrey font-bold text-xs mb-2">Email address</label>
+          <input type="email" id="email" name="email" placeholder="email@company.com" class=" w-full border-[1px] border-Grey py-3 lg:py-5 px-3 lg:px-5 rounded-lg cursor-pointer mb-8">
+          <!-- <input type="text" id="email" name="email"> -->
+          <p class="text-red-500 text-sm top-[100px] absolute" id="emailError"></p>
+          <button id="submit" class="text-White bg-DarkSlateGrey hover:bg-gradient-to-r from-pink-600 to-orange-600 hover:shadow-lg shadow-orange-600/50 py-3 lg:py-5 px-10 lg:px-14 mb-5 lg:mb-0  lg:font-bold rounded-lg cursor-pointer">Subscribe to monthly newsletter</button>
+        </form>
       </div>
-
+      <div>
+        <img src="assets/images/illustration-sign-up-desktop.svg" alt="" class="md:block hidden">
+      </div>
     </div>
-    <div>
-      <img src="assets/images/illustration-sign-up-desktop.svg" alt="" class="md:block hidden">
+
+    <div class="bg-White lg:p-14 lg:rounded-3xl lg:w-[500px] lg:h-[500px] hidden fixed z[1px] top-40 w-[100%] h-[100%]" id="successMessage">
+      <img src="assets/images/icon-success.svg" alt="" class="mb-8">
+      <h1 class="text-DarkSlateGrey text-5xl font-bold mb-8">Thanks for subscribing!</h1>
+      <p class="text-CharcoalGrey font-medium w-[105%] mb-10"> A confirmation email has been sent to <span id="value"></span>. 
+          Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button id="dismissMessage" class="grid content-center w-full bg-DarkSlateGrey hover:bg-gradient-to-r from-pink-600 to-orange-600 hover:shadow-lg shadow-orange-600/50 text-White py-4 px-24 rounded-lg cursor-pointer mb-5">Dismiss message </button>
     </div>
-  </div>
+   
+     <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <script src="main.js"></script>
 
-  <script src="main.js"></script>
-</body>
+  </body>
 </html>
